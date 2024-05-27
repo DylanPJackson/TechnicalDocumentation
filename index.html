@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="device=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <header>Django Basics</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Assumed_Prior_Knowledge">Assumed Prior Knowledge</a>
+      <a class="nav-link" href="#MTV_Architecture">MTV Architecture</a>
+      <a class="nav-link" href="#Template_Language">Template Language</a>
+      <a class="nav-link" href="#Unrelated_Django">Unrelated Django</a>
+    </div>
+    <section class="sections">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>"Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source." -djangoproject.com </p>
+				<p>Personally I'm using Django as the web framework for my revamped personal site. I wanted a way to
+				dynamically load content to the web page, and to be able to make changes to the content of the site
+				without redeploying. Django offers the ability to generalize your HTML so that you can populate fields 
+				in your HTML with data from a database. It's essentially the web standard of removing hard coded
+				variables, and I love it!</p>
+      </section>
+      <section class="main-section" id="Assumed_Prior_Knowledge">
+        <header>Assumed Prior Knowledge</header>
+        <p>Django doesn't assume too much prior knowledge, but a solid understanding of the following can
+				greatly ease your development process :</p>
+				<ul>
+					<li>Python (duh) : This mainly comes into play when writing your Views, or logic</li>
+					<li>HTML : Relevant when writing advanced templates / utilizing the Template Language</li>
+					<li>Site Hosting : For if you want to show off your Django site to the world</li>
+				</ul>
+      </section>
+      <section class="main-section" id="MTV_Architecture">
+        <header>MTV Architecture</header>
+        <p>Django essentially follows the standard MVC (Model, View, Controller) framework, which features
+				separate components to control : </p>
+				<ul>
+					<li>The Model : The source of truth data representing the application</li>
+					<li>The View : The version of model data displayed to the user</li>
+					<li>The Controller : Entity handling interaction between user, view, and data</li>
+				</ul>
+				<p>but with a slightly different spin.</p>
+				<p>"In our interpretation of MVC, the “view” describes the data that gets presented to the user. It’s not necessarily how the data looks, but which data is presented. The view describes which data you see, not how you see it."</p>
+				<p>They instead propose the MTV architecture, for "Model", "Template", and "View". This makes much more
+				sense in the context of Django, since you directly work with a model, which is fed into a template,
+				which is rendered with a view. Interested to learn more? Check out their explanation at their <a href="https://docs.djangoproject.com/en/5.0/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names" target="_blank">FAQ</a>.</p>
+      </section>
+      <section class="main-section" id="Template_Language">
+        <header>Template Language</header>
+        <p>Django has a language for their templates, or HTML, which you can use to render variable input
+				from your views. For example, when rendering a template, you can pass in <strong>context</strong>
+				from your view. Your context is essentially a dictionary of variable name mappings, and you can
+				access those variables in your HTML using the Django Template Language.</p>
+				<p>This allows you to do conditional rendering! What if you have an error message, and you want to
+				custom render a page to display that error? Use the template language : </p>
+				<code>{% if error_message %}<&p>Sorry, we got an error : {{ error_message }}<&/p></code>
+				<p>Or you have some object you're passing in, and you want to render one of it's attributes?
+				Use the template language</p>
+				<code><&p>Thanks so much {{ user.firstName }} for using our service!<&/p></code>
+      </section>
+      <section class="main-section" id="Unrelated_Django">
+        <header>Unrelated Django</header>
+				<p>Django is not meant to be confused with the critically acclaimed movie, Django Unchained, or the
+				lesser known 1996 film Django, or the french restaurant in Iowa, named Django.</p>
+      </section>
+    </section>
+    <footer>
+      <p class="footer_text">Certification Project for the <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page" target="_blank">Responsive Web Design Course</a> from <a href="https://www.freecodecamp.org/learn/" target="_blank">FreeCodeCamp</a>. Source code available on <a href="https://github.com/DylanPJackson/TechnicalDocumentation" target="_blank">Github</a>.</p> 
+    </footer>
+  </body>
+  
+</html>

@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 100%) {
+  #nav-bar {
+    border-right: solid black 1px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#navbar {
+  border-right: solid black 3px;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 310px;
+  overflow-x: hidden;
+  z-index: 1;
+  left: 0;
+  background-color: white;
+}
+
+#navbar header:first-of-type {
+  font-size: 2.5em; 
+  margin-bottom: 10px;
+  padding: 10px 10px 0 10px;
+  font-family: Monsterrat, sans-serif;
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.25em;
+  border-top: solid black 1px;
+  padding: 10px;
+  display: block;
+}
+
+.sections {
+  margin-left: 310px;
+  padding: 1rem;
+  background: linear-gradient(#97f98f, #78d471); 
+  height: 100%;
+}
+
+.sections .main-section {
+  margin-left: 20px;
+}
+
+.sections .main-section p,
+.sections .main-section code { 
+  margin-left: 20px;
+}
+
+.sections .main-section li{
+  margin-left: 50px;
+}
+
+#Assumed_Prior_Knowledge {
+  margin-bottom: 20px;
+}
+
+#Unrelated_Django {
+  margin-top: 20px;
+}
+
+section header {
+  font-size: 1.75em;
+  font-family: Monsterrat, sans-serif;
+}
+
+code {
+  background-color: #9cbe9aAA;
+}
+
+footer {
+	font-size: .65em;
+	font-family: system-ui;
+	text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #78d471; 
+  border: solid #78d471;
+  z-index: 0;
+}
+
+a:visited {
+  color: blue;
+}
